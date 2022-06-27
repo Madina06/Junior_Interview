@@ -26,6 +26,10 @@ C помощью SELECT выведите количество пассажиро
 Обязательные поля для вывода: Номер полета и Количество пассажиров.
 
 <!-- ЗАКРЕПИТЕ ВАШ SELECT ОТ 2 ЗАДАНИЯ ЗДЕСЬ -->
+select p.trip , count(p.passenger ) as count_passenger
+from Pass_in_trip as p
+group by p.trip, p.passenger
+order by count(p.passenger) DESC  
 
 ### Задание 3.
 
