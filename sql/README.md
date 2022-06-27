@@ -39,5 +39,10 @@ order by count(p.passenger) DESC
 и `COUNT` (Количество пассажиров, имена которых начинаются с этой буквы).
 
 <!-- ЗАКРЕПИТЕ ВАШ SELECT ОТ 3 ЗАДАНИЯ ЗДЕСЬ -->
+select SUBSTR (p.name, 1, 1) first_char, count(p.id)  as count_passenger
+from passenger as p
+group by first_char
+having count (p.id) > 1
+order by count(p.id) DESC
 
 <!-- После выполнения всех заданий, необходимо сделать push в репозиторий и отправить ссылку на него -->
