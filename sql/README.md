@@ -12,6 +12,12 @@ C помощью SELECT выведите всех пассажиров, кото
 как `COMPANY_NAME`.
 
 <!-- ЗАКРЕПИТЕ ВАШ SELECT ОТ 1 ЗАДАНИЯ ЗДЕСЬ -->
+select Passenger.id, Passenger.name as passenger_name, Trip.plane, Company.name
+from Trip
+INNER   JOIN  Company ON Company.id = Trip.company 
+INNER   JOIN Pass_in_trip ON Pass_in_trip.trip  = Trip.id
+INNER   join Passenger on Pass_in_trip.passenger = Passenger.id  
+where Trip.plane = 'Boeing' and Company.name = 'air_France'
 
 ### Задание 2.
 
